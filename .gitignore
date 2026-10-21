@@ -1,0 +1,10 @@
+# Large CSVs reconstructed from tracked, checksum-verified compressed parts
+/data/original_processed_features_4642.csv
+/data/analysis_features_4624.csv
+*.pyc
+__pycache__/
+.ipynb_checkpoints/
+/recomputed/
+/catboost_info/
+*.incomplete
+.DS_Store

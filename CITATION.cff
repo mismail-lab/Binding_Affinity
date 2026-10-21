@@ -1,0 +1,21 @@
+# AUTHOR VERIFICATION REQUIRED: order/names currently follow the latest manuscript.
+cff-version: 1.2.0
+message: "Please cite the associated manuscript and the versioned release."
+title: "Structure-Free Protein–Ligand Binding Affinity: Analysis and Reproducibility Code"
+authors:
+  - family-names: "Ismail"
+    given-names: "Muhammad"
+  - family-names: "Majid"
+    given-names: "Abdul"
+  - family-names: "Hashmi"
+    given-names: "M. U."
+version: "1.0.0"
+date-released: 2026-10-20
+repository-code: "https://github.com/mismail-lab/Binding_Affinity"
+keywords:
+  - "protein-ligand affinity"
+  - "PDBbind"
+  - "ProtT5"
+  - "LightGBM"
+  - "CatBoost"
+  - "reproducibility"
