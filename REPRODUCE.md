@@ -29,3 +29,15 @@ It uses the saved 3,699/925 holdout, randomly splits the 3,699 training records 
 Original run outputs, row-level predictions, corrected SHAP arrays, and all associated metadata live in `results/`. Test outcome comparisons are **post-hoc descriptive sensitivity estimates**, not unbiased confirmatory model-selection test results nor new external validation. Source ProtT5 embeddings cannot be regenerated end-to-end because upstream provenance is incomplete.
 
 The accompanying notebook `code/PLOS_ONE_Reviewer2_Jupyter_Step_by_Step.ipynb` may expect a source ZIP and the earlier Kaggle-style layout. For the extracted GitHub directory, the Python entry point `code/run_posthoc_budget_from_local_features.py` is the directly supported reproducible rerun.
+
+## Historical data-preparation provenance
+
+The recovered pre-embedding ligand–protein–affinity records are provided as five `provenance/metadata_chunks/meta_chunk_*.csv` files. To test all 4,642 original records against the 4,642-row matrix reconstructed above:
+
+```bash
+python code/verify_original_metadata.py
+```
+
+See `provenance/original_notebook_extraction_excerpt.md` for the preserved historical ligand SDF/protein PDB extraction logic, and `provenance/README.md` for what was and was not retained. To investigate the missing 674 records, `code/rebuild_pdbbind_exclusion_log.py` can be run on an **authorized local copy of the original PDBbind v2020 refined-set structure folders**. This is a new reconstruction test, not a preserved historical per-PDB exclusion log. Do not claim that its counts are the actual original failure counts without alignment to all archived rows.
+
+The two large feature matrices are generated locally by `restore_large_data.py`; they are intentionally absent from the Git repository as uncompressed CSVs to avoid duplicate 94 MB uploads.
